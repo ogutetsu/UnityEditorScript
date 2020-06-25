@@ -17,11 +17,11 @@ public class WindowExample : EditorWindow
     //F1～F12...Fキー
     //HOME, END, PGUP, PGDN
     //_X...キー
-    [MenuItem("Custom/Window/Show Palette #_S")]
-    public static void ShowPalette()
+    [MenuItem("Custom/Window/Show Window #_S")]
+    public static void ShowWindow()
     {
         instance = EditorWindow.GetWindow(typeof(WindowExample)) as WindowExample;
-        instance.titleContent = new GUIContent("Palette");
+        instance.titleContent = new GUIContent("Window");
     }
 
 
