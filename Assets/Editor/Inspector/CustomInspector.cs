@@ -38,5 +38,21 @@ public class CustomInspector : Editor
 
         GUILayout.Button("ボタンサイズを変更できます", GUILayout.Height(2*EditorGUIUtility.singleLineHeight));
 
+
+        
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.BeginVertical();
+        EditorGUILayout.IntField("Value1", 0);
+        EditorGUILayout.IntField("Value2", 1);
+        EditorGUILayout.EndVertical();
+
+        EditorGUILayout.BeginVertical();
+        GUILayout.Button("ボタン1");
+        GUILayout.Button("ボタン2");
+        EditorGUILayout.EndVertical();
+        
+        EditorGUILayout.EndHorizontal();
+
+
     }
 }
