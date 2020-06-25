@@ -330,6 +330,9 @@ MonoBehaviour:
   value1: 1
   value2: 2
   value3: 2
+  range: 0
+  Multiline: 
+  TextArea: 
 --- !u!4 &1615960222
 Transform:
   m_ObjectHideFlags: 0
