@@ -25,8 +25,45 @@ public class WindowExample : EditorWindow
     }
 
 
+    private List<string> tabCategories;
+    
+
+    private void Init()
+    {
+        if (tabCategories == null)
+        {
+            tabCategories = new List<string>();
+            foreach (var value in Enum.GetValues(typeof(Item.Category)))
+            {
+                tabCategories.Add(Enum.GetName(typeof(Item.Category), value));
+            }
+        }
+    }
+    
+    
+
     private void OnGUI()
     {
         EditorGUILayout.LabelField("OnGUI内で描画します。");
+
+        DrawTab();
+
     }
+
+    private void OnEnable()
+    {
+        Init();
+    }
+
+
+    private Item.Category _categorySelected;
+
+
+    private void DrawTab()
+    {
+        int index = (int) _categorySelected;
+        index = GUILayout.Toolbar(index,tabCategories.ToArray());
+        _categorySelected = (Item.Category)index;
+    }
+    
 }
