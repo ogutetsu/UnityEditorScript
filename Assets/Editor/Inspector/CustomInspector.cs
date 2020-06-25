@@ -30,5 +30,13 @@ public class CustomInspector : Editor
         //allowSceneObjectsは、シーン上のオブジェクトも設定できるかどうか
         EditorGUILayout.ObjectField("", null, typeof(GameObject), true);
 
+        bool button = GUILayout.Button("push");
+        if (button)
+        {
+            EditorUtility.DisplayDialog("", "ボタンを押しました。", "OK");
+        }
+
+        GUILayout.Button("ボタンサイズを変更できます", GUILayout.Height(2*EditorGUIUtility.singleLineHeight));
+
     }
 }
