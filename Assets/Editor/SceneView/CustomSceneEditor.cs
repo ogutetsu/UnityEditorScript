@@ -43,6 +43,7 @@ public class CustomSceneEditor : Editor
         
         Handles.EndGUI();
 
+        //シーンビューの操作
         switch (currentType)
         {
             //Viewを選択したらViewに切り替え
@@ -59,6 +60,13 @@ public class CustomSceneEditor : Editor
                 break;
         }
 
+        //マウス位置の取得
+        Vector3 mousePos = Event.current.mousePosition;
+
+        Camera camera = SceneView.currentDrawingSceneView.camera;
+        Vector3 worldPos = camera.ScreenToWorldPoint(mousePos);
+        
+        Debug.LogFormat($"MousePos : {mousePos}  worldPos : {worldPos}");
 
 
     }
