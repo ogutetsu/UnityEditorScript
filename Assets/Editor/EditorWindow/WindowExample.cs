@@ -40,20 +40,24 @@ public class WindowExample : EditorWindow
     {
         InitTab();
 
+        InitScroll();
+    }
+
+    private void InitScroll()
+    {
         _items = EditorUtil.GetAssetWithScript<Item>(_prefabPath);
         _categorizedItems = new Dictionary<Item.Category, List<Item>>();
         _previews = new Dictionary<Item, Texture2D>();
 
         foreach (var category in Enum.GetValues(typeof(Item.Category)))
         {
-            _categorizedItems.Add((Item.Category)category, new List<Item>());
+            _categorizedItems.Add((Item.Category) category, new List<Item>());
         }
-        
+
         foreach (var item in _items)
         {
             _categorizedItems[item.category].Add(item);
         }
-
 
 
         foreach (var item in _items)
@@ -67,8 +71,6 @@ public class WindowExample : EditorWindow
                 }
             }
         }
-        
-        
     }
 
     private void InitTab()
