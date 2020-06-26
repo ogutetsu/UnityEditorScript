@@ -12,11 +12,12 @@ public class CustomSceneEditor : Editor
     public enum Type
     {
         View,
-        Edit,
+        Gizmo,
         Test,
+        TwoD,
     }
 
-    private int currentType;
+    private Type currentType;
     
     //シーンビューに描画
     private void OnSceneGUI()
@@ -32,7 +33,7 @@ public class CustomSceneEditor : Editor
         
         GUILayout.BeginArea(new Rect(10f,10f,200f,20f));
 
-        currentType = GUILayout.Toolbar(
+        currentType = (Type)GUILayout.Toolbar(
             (int) currentType,
             typeLabels.ToArray(),
             GUILayout.ExpandHeight(true)
@@ -41,6 +42,24 @@ public class CustomSceneEditor : Editor
         GUILayout.EndArea();
         
         Handles.EndGUI();
+
+        switch (currentType)
+        {
+            //Viewを選択したらViewに切り替え
+            case Type.View:
+                Tools.current = Tool.View;
+                break;
+            case Type.Gizmo:
+                //Gizmoをオン
+                SceneView.currentDrawingSceneView.drawGizmos = true;
+                break;
+            case Type.TwoD:
+                //強制的に2Dモードに変更
+                SceneView.currentDrawingSceneView.in2DMode = true;
+                break;
+        }
+
+
 
     }
 }
