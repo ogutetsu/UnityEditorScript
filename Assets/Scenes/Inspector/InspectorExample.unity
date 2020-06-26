@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Year: 2120
+  Str: 
 --- !u!4 &976695117
 Transform:
   m_ObjectHideFlags: 0
