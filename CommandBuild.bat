@@ -1,3 +1,4 @@
+chcp 65001
 set UNITYPATH="C:\Program Files\Unity\2020.1.0b12\Editor\"
 echo %UNITYPATH%
-%UNITYPATH%Unity.exe -quit -batchmode -executeMethod BuildExample.CommandBuild "batƒtƒ@ƒCƒ‹‚©‚ç‚ÌƒeƒLƒXƒg"
+%UNITYPATH%Unity.exe -quit -batchmode -executeMethod BuildExample.CommandBuild "batãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã®ãƒ†ã‚­ã‚¹ãƒˆ"
