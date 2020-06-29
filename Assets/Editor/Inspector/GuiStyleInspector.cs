@@ -11,7 +11,8 @@ public class GuiStyleInspector : Editor
 
     private GUIStyle _customStyle;
 
-    
+    private GUISkin _customSkin;
+
 
     private void InitStyles()
     {
@@ -25,6 +26,10 @@ public class GuiStyleInspector : Editor
         _customStyle.normal.background = tex;
         _customStyle.normal.textColor = Color.white;
 
+
+        _customSkin = Resources.Load("CustomSkin") as GUISkin;
+        
+        
 
     }
 
@@ -40,6 +45,10 @@ public class GuiStyleInspector : Editor
         EditorGUILayout.LabelField("boldLabel", EditorStyles.boldLabel);
         EditorGUILayout.LabelField("Custom", _customStyle);
 
+        GUILayout.Button("CustomSkinのLabel", _customSkin.label);
+        GUILayout.Button("CustomSkinのButton", _customSkin.button);
 
+
+        
     }
 }
