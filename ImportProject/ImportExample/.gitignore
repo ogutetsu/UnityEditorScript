@@ -1,0 +1,7 @@
+
+./idea
+
+/ImportExample/bin/
+/ImportExample/obj/
+
+!*.sln
