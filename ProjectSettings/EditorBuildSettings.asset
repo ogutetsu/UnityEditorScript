@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Build/ExtermalScript.unity
+    guid: bc939f334f04649428264d121dd6978c
   m_configObjects: {}
