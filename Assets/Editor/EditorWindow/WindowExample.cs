@@ -89,7 +89,7 @@ public class WindowExample : EditorWindow
     private void OnGUI()
     {
         EditorGUILayout.LabelField("OnGUI内で描画します。");
-
+        EditorGUILayout.LabelField("Windowsサイズを小さくするとスクロールバーが表示されます");
         DrawTab();
         DrawScroll();
     }
