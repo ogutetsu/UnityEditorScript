@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    
+    <engine:VisualElement name="ButtonHolder">
+        
+    </engine:VisualElement>
+    <engine:VisualElement name="Container">
+        <engine:VisualElement name="LeftPanel">
+            <engine:Label text="LeftPanel"/>
+        </engine:VisualElement>
+        <engine:VisualElement name="RightPanel">
+            <engine:VisualElement name="RightTopPanel">
+                <engine:Label text="RightTopPanel"/>
+            </engine:VisualElement>
+            <engine:VisualElement name="RightBottomPanel">
+                <engine:Label text="RightBottomPanel"/>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
