@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GraphViewWindow : EditorWindow
 {
@@ -12,9 +13,14 @@ public class GraphViewWindow : EditorWindow
 
     private void OnEnable()
     {
-        rootVisualElement.Add(new GraphViewExample()
+        var graphView = new GraphViewExample()
         {
             style = { flexGrow = 1}
-        });
+        };
+        rootVisualElement.Add(graphView);
+        
+        
+        rootVisualElement.Add(new Button(graphView.Exe) { text = "実行"});
+        
     }
 }
