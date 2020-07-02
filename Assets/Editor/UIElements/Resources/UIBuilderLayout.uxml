@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Label text="Label">
+        <Style src="PresetWindowUSS.uss" />
+    </ui:Label>
+    <ui:VisualElement name="Container">
+        <Style src="PresetWindowUSS.uss" />
+        <ui:VisualElement name="LeftPanel" style="width: 349px; height: 208px;" />
+        <ui:VisualElement name="RightPanel">
+            <ui:VisualElement name="RightTopPanel" />
+            <ui:VisualElement name="RightBottomPanel" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Button text="Button" name="button1">
+        <Style src="PresetWindowUSS.uss" />
+    </ui:Button>
+</ui:UXML>

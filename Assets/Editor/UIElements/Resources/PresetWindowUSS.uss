@@ -1,23 +1,19 @@
-﻿#ButtonHolder
-{
+#ButtonHolder {
     height: 50px;
     width: auto;
     background-color: blue;
-    
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
 }
 
-#Container
-{
+#Container {
     background-color: azure;
     display: flex;
     flex-direction: row;
     width: auto;
 }
 
-#RightPanel
-{
+#RightPanel {
     position: relative;
     flex: 1;
     width: auto;
@@ -25,8 +21,7 @@
     border-color: chartreuse;
 }
 
-#LeftPanel
-{
+#LeftPanel {
     display: flex;
     -unity-text-align: middle-center;
     flex: 1;
@@ -35,8 +30,7 @@
     border-color: chartreuse;
 }
 
-#RightTopPanel
-{
+#RightTopPanel {
     border-width: 1px;
     border-color: chartreuse;
     -unity-text-align: middle-center;
@@ -44,8 +38,7 @@
     flex: 1;
 }
 
-#RightBottomPanel
-{
+#RightBottomPanel {
     border-width: 1px;
     border-color: chartreuse;
     -unity-text-align: middle-center;
