@@ -59,7 +59,6 @@ public class GraphViewWindow : EditorWindow
         if (path == "") return;
         var temp = Regex.Split(path, "/Assets/");
         path = "Assets/" + temp[1];
-        Debug.Log(path);
         LoadGraph(path);
     }
     
